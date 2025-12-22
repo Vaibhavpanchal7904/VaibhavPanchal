@@ -1,0 +1,28 @@
+:root {
+  --bg-main: #0b0f14;
+  --bg-panel: #121821;
+  --bg-card: #161d29;
+
+  --border-soft: rgba(255, 255, 255, 0.06);
+  --text-primary: #e6edf3;
+  --text-muted: #9aa4b2;
+
+  --accent-green: #3fb950;
+  --accent-blue: #58a6ff;
+  --accent-yellow: #d29922;
+
+  --radius: 10px;
+  --transition: 0.25s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #0b0f14, #090d12);
+  color: var(--text-primary);
+  font-family: "Inter", system-ui, sans-serif;
+  letter-spacing: 0.2px;
+}
