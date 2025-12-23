@@ -59,9 +59,6 @@ export default function ActiveModules() {
 
             {/* FOOTER */}
             <div className="project-footer">
-              <a href={project.live} target="_blank" rel="noreferrer">
-                Live Demo
-              </a>
               <a href={project.github} target="_blank" rel="noreferrer">
                 Source Code
               </a>

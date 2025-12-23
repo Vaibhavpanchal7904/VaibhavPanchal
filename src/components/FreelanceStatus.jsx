@@ -100,40 +100,60 @@ export default function FreelanceStatus() {
         )}
 
         {/* ===== COMPLETED PROJECTS ===== */}
-        {activeTab === "completed" && (
-          <div className="experience-grid">
+{activeTab === "completed" && (
+  <div className="experience-grid">
 
-            {/* ===== MIRAYA BEAUTY CARE CARD ===== */}
-            <div className="experience-card highlight">
-              <div className="experience-header">
-                <h3>Miraya Beauty Care</h3>
-                <span className="status-badge live">LIVE</span>
-              </div>
+    <div className="experience-card highlight">
 
-              <p className="experience-meta">
-                ⏱ 2 Months &nbsp; | &nbsp; 🌍 Freelance &nbsp; | &nbsp; 🧩 Real-world Client
-              </p>
+      {/* IMAGE */}
+      <div className="experience-image">
+        <img
+          src="/p4.png"
+          alt="Miraya Beauty Care Website"
+        />
 
-              <p className="experience-desc">
-                Designed and developed a complete business website for a beauty care brand,
-                focusing on brand presence, service showcasing, and dynamic content updates.
-              </p>
+        <a
+          href="https://mirayabeautycare.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="live-demo-btn"
+        >
+          🔗 Live Demo
+        </a>
+      </div>
 
-              <ul className="experience-points">
-                <li>Responsive UI using HTML, CSS, JavaScript, jQuery & Bootstrap</li>
-                <li>Integrated Contentful CMS for easy content management</li>
-                <li>Used APIs to dynamically render business content</li>
-                <li>Handled full lifecycle: design, development, testing & deployment</li>
-              </ul>
+      {/* CONTENT */}
+      <div className="experience-body">
+        <div className="experience-header">
+          <h3>Miraya Beauty Care</h3>
+          <span className="status-badge live">LIVE</span>
+        </div>
 
-              <p className="experience-learning">
-                📘 <strong>Learning:</strong> Client communication, real project timelines,
-                deployment responsibility, and long-term maintainability
-              </p>
-            </div>
+        <p className="experience-meta">
+          ⏱ 2 Months &nbsp; | &nbsp; 🌍 Freelance &nbsp; | &nbsp; 🧩 Real-world Client
+        </p>
 
-          </div>
-        )}
+        <p className="experience-desc">
+          Designed and developed a complete business website for a beauty care brand,
+          focusing on brand presence, service showcasing, and dynamic content updates.
+        </p>
+
+        <ul className="experience-points">
+          <li>Responsive UI using HTML, CSS, JavaScript, jQuery & Bootstrap</li>
+          <li>Integrated Contentful CMS for easy content management</li>
+          <li>API-driven dynamic content sections</li>
+          <li>Handled full lifecycle: design → deployment</li>
+        </ul>
+
+        <p className="experience-learning">
+          📘 <strong>Learning:</strong> Client communication, real deadlines,
+          production deployment, long-term maintainability
+        </p>
+      </div>
+
+    </div>
+  </div>
+)}
       </section>
 
       {/* ================= APP DEVELOPMENT ================= */}
@@ -197,7 +217,7 @@ export default function FreelanceStatus() {
             </button>
           </div>
 
-          <div className="freelance-image animate-left">
+          <div className="freelance-image animate-">
             <img src="/web.avif" alt="Web App Development" />
           </div>
 

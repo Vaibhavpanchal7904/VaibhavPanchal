@@ -11,8 +11,7 @@ export const projects = [
     ],
     tech: ["Node.js", "Express", "MongoDB", "Cohere API", "JSearch API"],
     image: "/p1.png",
-    live: "#",
-    github: "#"
+    github: "https://github.com/Vaibhavpanchal7904/CareerGinnie-Ai-powerd-Virtual-Assistant"
   },
   {
     id: 2,
@@ -26,8 +25,7 @@ export const projects = [
     ],
     tech: ["React", "Firebase", "Firestore"],
     image: "/p2.png",
-    live: "#",
-    github: "#"
+    github: "https://github.com/Vaibhavpanchal7904/MindDrops"
   },
   {
     id: 3,
@@ -41,8 +39,7 @@ export const projects = [
     ],
     tech: ["Node.js", "Express", "MongoDB", "Mapbox", "Cloudinary"],
     image: "/p3.png",
-    live: "#",
-    github: "#"
+    github: "https://github.com/Vaibhavpanchal7904/WanderLust"
   },
   {
     id: 4,
@@ -56,8 +53,7 @@ export const projects = [
     ],
     tech: ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Contentful API"],
     image: "/p4.png",
-    live: "#",
-    github: "#"
+    github: "https://github.com/Vaibhavpanchal7904/Mirayass"
   },
   {
     id: 5,
@@ -71,7 +67,6 @@ export const projects = [
     ],
     tech: ["React Native", "SQLite"],
     image: "/p5.png",
-    live: "#",
     github: "#"
   },
   {
@@ -86,8 +81,7 @@ export const projects = [
     ],
     tech: ["Node.js", "Express", "MongoDB", "React"],
     image: "/p6.png",
-    live: "#",
-    github: "#"
+    github: "https://github.com/Vaibhavpanchal7904/UserRegApp"
   },
   {
     id: 7,
@@ -101,8 +95,8 @@ export const projects = [
     ],
     tech: ["React", "JavaScript"],
     image: "/p7.png",
-    live: "#",
-    github: "#"
+
+    github: "https://github.com/Vaibhavpanchal7904/TextMate"
   },
   {
     id: 8,
@@ -116,8 +110,7 @@ export const projects = [
     ],
     tech: ["React", "News API"],
     image: "/p8.png",
-    live: "#",
-    github: "#"
+    github: "https://github.com/Vaibhavpanchal7904?tab=repositorieshttps://github.com/Vaibhavpanchal7904/BuzzFetch"
   },
   {
     id: 9,
@@ -131,7 +124,6 @@ export const projects = [
     ],
     tech: ["React", "CSS3", "JavaScript"],
     image: "/p9.png",
-    live: "#",
-    github: "#"
+    github: "https://github.com/Vaibhavpanchal7904?tab=repositories"
   }
 ];
