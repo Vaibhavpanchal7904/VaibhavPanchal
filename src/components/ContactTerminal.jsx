@@ -20,29 +20,20 @@ export default function ContactTerminal() {
           <div className="terminal-section">
             <h4>Get Connected On</h4>
             <div className="icon-row">
-              <a href="https://github.com/" className="icon github">GitHub</a>
-              <a href="https://linkedin.com/" className="icon linkedin">LinkedIn</a>
+              <a href="https://github.com/Vaibhavpanchal7904" className="icon github">GitHub</a>
+              <a href="http://www.linkedin.com/in/vaibhav-panchal-9b3882348" className="icon linkedin">LinkedIn</a>
               <a href="#" className="icon twitter">X</a>
               <a href="#" className="icon instagram">Instagram</a>
             </div>
           </div>
 
-          {/* SHARE */}
-          <div className="terminal-section">
-            <h4>Share this System</h4>
-            <div className="icon-row">
-              <span className="icon facebook">Facebook</span>
-              <span className="icon twitter">X</span>
-              <span className="icon linkedin">LinkedIn</span>
-              <span className="icon whatsapp">WhatsApp</span>
-            </div>
-          </div>
+         
 
           {/* CONTACT INFO */}
           <div className="terminal-section">
             <h4>Direct Contact</h4>
-            <p>📞 +91-XXXXXXXXXX</p>
-            <p>✉️ vaibhav@email.com</p>
+            <p>📞 +91-9313704891</p>
+            <p>✉️ vaibhavpanchal7904@email.com</p>
           </div>
 
           {/* STATUS */}

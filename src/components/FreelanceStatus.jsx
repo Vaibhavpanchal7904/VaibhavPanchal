@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import emailjs from "emailjs-com";
 
 export default function FreelanceStatus() {
@@ -7,28 +6,28 @@ export default function FreelanceStatus() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [serviceType, setServiceType] = useState("");
+  const [activeTab, setActiveTab] = useState("completed");
 
+  useEffect(() => {
+    const elements = document.querySelectorAll(
+      ".animate-left, .animate-right"
+    );
 
-useEffect(() => {
-  const elements = document.querySelectorAll(
-    ".animate-left, .animate-right"
-  );
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
 
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in-view");
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
+    elements.forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
-  elements.forEach(el => observer.observe(el));
-
-  return () => observer.disconnect();
-}, []);
   const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -56,6 +55,87 @@ useEffect(() => {
 
   return (
     <>
+      {/* ================= PAGE TITLE ================= */}
+      <section className="section-header">
+        <h2 className="section-title">💼 Professional Experience & Freelance Work</h2>
+        <p className="section-subtitle">
+          Real-world projects, hands-on development, and client-focused delivery
+        </p>
+
+        {/* ================= TABS ================= */}
+        <div className="experience-tabs">
+          <button
+            className={`tab ${activeTab === "current" ? "active" : ""}`}
+            onClick={() => setActiveTab("current")}
+          >
+            Current Projects
+          </button>
+          <button
+            className={`tab ${activeTab === "completed" ? "active" : ""}`}
+            onClick={() => setActiveTab("completed")}
+          >
+            Completed Projects
+          </button>
+        </div>
+      </section>
+
+      {/* ================= EXPERIENCE ================= */}
+      <section className="experience-section">
+
+        {/* ===== CURRENT PROJECTS ===== */}
+        {activeTab === "current" && (
+          <div className="experience-grid">
+            <div className="experience-card muted">
+              <h3>🚧 Ongoing Development Work</h3>
+              <p className="experience-desc">
+                Currently working on web and mobile projects involving dashboards,
+                backend systems, UI improvements, and performance optimization.
+              </p>
+              <p className="experience-learning">
+                📘 <strong>Focus:</strong> Scalability, clean architecture, and
+                production-ready deployment
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* ===== COMPLETED PROJECTS ===== */}
+        {activeTab === "completed" && (
+          <div className="experience-grid">
+
+            {/* ===== MIRAYA BEAUTY CARE CARD ===== */}
+            <div className="experience-card highlight">
+              <div className="experience-header">
+                <h3>Miraya Beauty Care</h3>
+                <span className="status-badge live">LIVE</span>
+              </div>
+
+              <p className="experience-meta">
+                ⏱ 2 Months &nbsp; | &nbsp; 🌍 Freelance &nbsp; | &nbsp; 🧩 Real-world Client
+              </p>
+
+              <p className="experience-desc">
+                Designed and developed a complete business website for a beauty care brand,
+                focusing on brand presence, service showcasing, and dynamic content updates.
+              </p>
+
+              <ul className="experience-points">
+                <li>Responsive UI using HTML, CSS, JavaScript, jQuery & Bootstrap</li>
+                <li>Integrated Contentful CMS for easy content management</li>
+                <li>Used APIs to dynamically render business content</li>
+                <li>Handled full lifecycle: design, development, testing & deployment</li>
+              </ul>
+
+              <p className="experience-learning">
+                📘 <strong>Learning:</strong> Client communication, real project timelines,
+                deployment responsibility, and long-term maintainability
+              </p>
+            </div>
+
+          </div>
+        )}
+      </section>
+
       {/* ================= APP DEVELOPMENT ================= */}
       <section className="freelance-hero">
         <div className="freelance-container">
@@ -65,7 +145,7 @@ useEffect(() => {
           </div>
 
           <div className="freelance-glass animate-left">
-            <h3>App Development Services</h3>
+            <h3>Mobile App Development</h3>
 
             <ul>
               <li>📱 <strong>Custom Android Apps</strong> — Business & startup ready</li>
@@ -88,11 +168,11 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* ================= WEB APP DEVELOPMENT ================= */}
+      {/* ================= WEB DEVELOPMENT ================= */}
       <section className="freelance-hero">
         <div className="freelance-container reverse">
 
-          <div className="freelance-glass">
+          <div className="freelance-glass animate-right">
             <h3>Web Application Development</h3>
 
             <ul>
@@ -117,8 +197,8 @@ useEffect(() => {
             </button>
           </div>
 
-          <div className="freelance-image">
-            <img src="/web-dev.png" alt="Web App Development" />
+          <div className="freelance-image animate-left">
+            <img src="/web.avif" alt="Web App Development" />
           </div>
 
         </div>

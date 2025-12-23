@@ -6,7 +6,7 @@ export default function Header({ toggleSidebar }) {
         ☰
       </button>
 
-      <h1>🖥️ VaibhavOS</h1>
+      <h1>🖥️ Vaibhav Panchal</h1>
 
       <span className="status online">SYSTEM ONLINE</span>
     </header>
